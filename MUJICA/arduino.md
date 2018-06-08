@@ -3,11 +3,11 @@ CODIGO ARDUINO - CROMATIC TRANCE
 
 ```
 
-                                                                                     #include <CapacitiveSensor.h>
+#include <CapacitiveSensor.h>
 CapacitiveSensor sensor = CapacitiveSensor(13,12); //sender y recive pines en puente. ver esquema       
 CapacitiveSensor sensor2 = CapacitiveSensor(9,8);
 CapacitiveSensor sensor3 = CapacitiveSensor(5,4);
-//int lectura=0;
+
 
 void setup()                    
 {
@@ -25,19 +25,19 @@ void loop()
     long lectura3 = sensor3.capacitiveSensor(30);
  
     
-if(lectura > 300){  //PARA PRENDER Y APAGAR EL LED
+if(lectura > 300){  //PARA PRENDER Y APAGAR EL LED CYAN
    digitalWrite(11,HIGH);
 }   else{
    digitalWrite(11,LOW);
 }
 
-if(lectura2 > 300){  //PARA PRENDER Y APAGAR EL LED
+if(lectura2 > 300){  //PARA PRENDER Y APAGAR EL LED MAGENTA
    digitalWrite(7,HIGH);
 }   else{
    digitalWrite(7,LOW);
 }
 
-if(lectura3 > 300){  //PARA PRENDER Y APAGAR EL LED
+if(lectura3 > 300){  //PARA PRENDER Y APAGAR EL LED AMARILLO
    digitalWrite(3,HIGH);
 }   else{
    digitalWrite(3,LOW);
